@@ -1,0 +1,157 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: url(./assets/images/bg.jpg);
+}
+.container {
+    position: relative;
+    min-height: 100vh;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #313866;
+    box-shadow: 5px 1px 100px 10px black;
+
+}
+
+.container .search-box {
+    position: fixed;
+    height: 42px;
+    width: 400px;
+    margin: 0 280px;
+    z-index: 100;
+}
+
+.search-box input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #232D3F;
+    padding: 0 15px 0 45px;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.search-box i {
+    position: absolute;
+    z-index: 2;
+    color: #999;
+    top: 50%;
+    left: 15px;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+
+.container1 {
+    position: relative;
+    transform: scale(1);
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin-top: 50px;
+  }
+  
+  .container1 .box {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-top: 45px;
+    border-radius: 10%;
+  }
+  .container1:hover .box {
+    transform: rotateY(10deg);
+  }
+  .container1 .box:hover ~ .box {
+    transform: rotateY(-10deg);
+  }
+  .container1 .box:hover {
+    transform: rotateY(0deg) scale(1.25);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  .container1 .box .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .container1 .box .imgBox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #2d2527, black);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+  }
+  .container1 .box:hover .imgBox:before {
+    opacity: 1;
+  }
+  .container1 .box .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .container1 .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+  
+  .container1 .box .content h2 {
+    color: white;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    transform: translateY(200px);
+    transition-delay: 0.3s;
+  }
+  .container1 .box:hover .content h2 {
+    transform: translateY(0px);
+  }
+  .container1 .box .content p {
+    color: white;
+    transition: 0.5s;
+    font-size: 14px;
+    transform: translateY(200px);
+    transition-delay: 0.4s;
+  }
+  .container1 .box:hover .content p {
+    transform: translateY(0px);
+  }
+  
